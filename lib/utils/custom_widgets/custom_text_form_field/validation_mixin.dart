@@ -12,6 +12,8 @@ mixin ValidationMixin<T extends StatefulWidget> on State<T> {
   }
 
   bool emailValid(String userEmail) {
+    // another way to handle mail validation
+    // validator package has a predefined function called isMail()
     return RegExp(r"^[a-zA-Z!$#^*]+.[0-9]+@[a-zA-Z0-9]+\.[a-zA-Z]+")
         .hasMatch(userEmail);
   }
